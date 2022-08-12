@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "tokentrack",
+    "slug": "tokentrack",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
