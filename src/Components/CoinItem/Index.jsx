@@ -22,6 +22,9 @@ const normalizeMarketCap = (marketCap) => {
   return marketCap;
 };
 
+const caretColor = price_change_percentage_24h < 0 ? '#ea3943' : '#16c784';
+const caretDirection = price_change_percentage_24h < 0 ? 'caretdown' : 'caretup';
+
  return (
     <View style={styles.coinContainer}>
     <Image source={{uri: image}} style={styles.cryptoIcon} />
@@ -32,8 +35,8 @@ const normalizeMarketCap = (marketCap) => {
               <Text style={styles.rank}>{market_cap_rank}</Text>
               </View>
             <Text style={styles.text}>{symbol.toUpperCase()}</Text>
-            <AntDesign name='caretdown' size={12} color='white' style={{alignSelf: 'center', marginRight: 5}} />
-            <Text style={styles.text}>{price_change_percentage_24h.toFixed(2)}%</Text>
+            <AntDesign name={caretDirection} size={12} color={caretColor} style={{alignSelf: 'center', marginRight: 5}} />
+            <Text style={{color: caretColor}}>{price_change_percentage_24h.toFixed(2)}%</Text>
           </View>
         </View> 
 
