@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     height: 30,
     width: 30,
     marginRight: 10,
-    alignSelf: 'center',
+    alignSelf: 'center'
   }
 });
 
